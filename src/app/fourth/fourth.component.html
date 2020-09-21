@@ -7,12 +7,12 @@
 
 <div>
     <div class="custom-control custom-checkbox" *ngFor="let i of values">
-        <input type="checkbox" class="custom-control-input" id="{{i.id}}" (change)="i.isChacked=!i.isChacked" [(ngModel)]="i.isChacked">
+        <input type="checkbox" class="custom-control-input" id="{{i.id}}" (change)="values[i].isChacked=!i.isChacked" [(ngModel)]="i.isChacked">
         <label class="custom-control-label" for="{{i.id}}">{{i.id}}</label>
     </div>
 </div>
 
-<button name="Remove" (click)="remove($event)">
+<button name="Remove" (click)="remove()">
     Remove Marked
 </button>
 

@@ -20,16 +20,12 @@ export class FourthComponent implements OnInit {
     //console.log(this.values);
   }
 
-  remove(event)
+  remove()
   {
-    //this.values.forEach(cb => cb.c = false)
-    // console.log(this.values.filter(opt => opt.isChacked));
-
-    this.values.forEach(element => {
-      if(element.isChacked == true)
-          this.values.splice(this.values.indexOf(element,0),1);
+    this.values.forEach(value => {
+      if (value.isChacked == true) {
+        this.values.splice(this.values.indexOf(value,0),1);
+      }
     });
-             
-
   }
 }
